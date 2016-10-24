@@ -53,11 +53,11 @@ extern "C" {
 
     pub fn glslopt_set_max_unroll_iterations(ctx: *mut glslopt_ctx, iterations: libc::c_uint);
 
-    pub fn glsl_optimize(ctx: *mut glslopt_ctx,
-                         ty: glslopt_shader_type,
-                         shaderSource: *const libc::c_char,
-                         options: libc::c_uint)
-                         -> *mut glslopt_shader;
+    pub fn glslopt_optimize(ctx: *mut glslopt_ctx,
+                            ty: glslopt_shader_type,
+                            shaderSource: *const libc::c_char,
+                            options: libc::c_uint)
+                            -> *mut glslopt_shader;
     pub fn glslopt_get_status(shader: *mut glslopt_shader) -> bool;
     pub fn glslopt_get_output(shader: *mut glslopt_shader) -> *const libc::c_char;
     pub fn glslopt_get_raw_output(shader: *mut glslopt_shader) -> *const libc::c_char;
