@@ -15,7 +15,7 @@ pub const kGlslOptShaderVertex: glslopt_shader_type = 0;
 pub const kGlslOptShaderFragment: glslopt_shader_type = 1;
 
 // Options flags for glsl_optimize
-pub type glslopt_options = libc::c_int;
+pub type glslopt_options = libc::c_uint;
 // Skip preprocessing shader source. Saves some time if you know you don't need it.
 pub const kGlslOptionSkipPreprocessor: glslopt_options = (1 << 0);
 // Passed shader is not the full shader source. This makes some optimizations weaker.
